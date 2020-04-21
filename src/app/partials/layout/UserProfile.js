@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {Dropdown} from "react-bootstrap";
 import { connect } from "react-redux";
-import { toAbsoluteUrl } from "../../../_metronic";
 import HeaderDropdownToggle from "../content/CustomDropdowns/HeaderDropdownToggle";
 
 class UserProfile extends React.Component {

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import MUIDataTable from "mui-datatables";
 import { Typography, Grid, IconButton, MenuItem, Menu } from "@material-ui/core";
 import { MoreVert} from "@material-ui/icons";
@@ -17,38 +17,35 @@ export default function ManageNumbers() {
   const [tollOpen, setTollOpen] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  // const [isEye, setEye] = useState(false);
-
-  const handleClick = (e) => {
-    setAnchorEl(e.currentTarget);
-  };
-
+  const handleClick = (e) => setAnchorEl(e.currentTarget);
   const handleClose = (type) => {
-    if (type === "a") {
+    if (type === "a")
       setAddOpen(true);
-    }
     setAnchorEl(null);
   };
 
-  const columns = useMemo(() => [
+  const columns = [
     { name: "service_type", label: "Service Type" },
     {
       name: "number", label: "Number", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
-        customBodyRender: (value) => <div style={{textAlign: 'center'}}><a href={`facetime:${value}`}>{value}</a></div>
+        customBodyRender: (value) => <div style={{textAlign: 'center', minWidth: 80}}><a href={`facetime:${value}`}>{value}</a></div>
       }
     },
     {
       name: "destination_number", label: "Destination Number", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
-        customBodyRender: (value) => <div style={{textAlign: 'center'}}><a href={`facetime:${value}`}>{value}</a></div>
+        customBodyRender: (value) => <div style={{textAlign: 'center', minWidth: 80}}><a href={`facetime:${value}`}>{value}</a></div>
       }
     },
     {
       name: "status", label: "Status", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
         customBodyRender: (value) => (
-          <div style={{textAlign: 'center'}}><Badge pill variant={value === "success" ? "success": "warning"}>{value}</Badge></div>
+          <div style={{textAlign: 'center', minWidth: 70}}>
+            <Badge pill variant={value === "success" ? "success": "warning"} style={{fontWeight: 'bold', color: 'white'}}>
+              {value.toUpperCase()}
+            </Badge></div>
         )
       }
     },
@@ -57,8 +54,8 @@ export default function ManageNumbers() {
     { name: "spent", label: "Spent", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
         customBodyRender: (value) => (
-          <Grid container justify="center">
-            <Badge pill variant="primary">{value} min</Badge>
+          <Grid container justify="center" style={{minWidth: 100}}>
+            <Badge pill variant="primary">{value}min</Badge>
             <Typography>&nbsp;/&nbsp;</Typography>
             <Badge pill variant="warning">${value}.00</Badge>
           </Grid>
@@ -69,8 +66,8 @@ export default function ManageNumbers() {
       name: "remaining", label: "Remaining", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
         customBodyRender: (value) => (
-          <Grid container justify="center">
-            <Badge pill variant="primary">{value} min</Badge>
+          <Grid container justify="center" style={{minWidth: 140}}>
+            <Badge pill variant="primary">{value}min</Badge>
             <Typography>&nbsp;/&nbsp;</Typography>
             <Badge pill variant="warning">${value}.00</Badge>
             &nbsp;
@@ -116,7 +113,7 @@ export default function ManageNumbers() {
         }
       }
     }
-  ]);
+  ];
 
   const options = {
     filterType: "dropdown",

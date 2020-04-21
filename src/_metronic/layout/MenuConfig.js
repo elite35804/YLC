@@ -30,7 +30,7 @@ export default {
         title: "Activity Log",
         root: true,
         alignment: "left",
-        page: "configuration",
+        page: "activity_log",
       },
       {
         title: "Billing",
@@ -99,7 +99,7 @@ export default {
         title: "Activity Log",
         root: true,
         icon: "flaticon-folder-4",
-        page: "dashboard",
+        page: "activity_log",
         bullet: "dot"
       },
       {

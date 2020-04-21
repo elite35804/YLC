@@ -46,6 +46,10 @@
   @import "./_metronic/_assets/sass/global/layout/aside/skins/light.scss";
 }
 
+.MuiTableCell-root {
+  padding: 0 !important;
+}
+
 // Web Icon fonts
 // @import "~socicon/css/socicon.css";
 // @import "~@fortawesome/fontawesome-free/css/all.min.css";

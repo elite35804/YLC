@@ -3,13 +3,13 @@ import MUIDataTable from "mui-datatables";
 import { Typography, Grid, IconButton, MenuItem, Menu } from "@material-ui/core";
 import { MoreVert} from "@material-ui/icons";
 import { Badge } from "react-bootstrap";
-import "./index.css";
 import CallLogModal from "./CallLogModal";
 import LocalNumModal from "./LocalNumModal";
 import TollfreeNumModal from "./TollfreeNumModal";
 import { CellCenterHeader } from "../utils";
 import AddMinutesModal from "./AddMinutesModal";
 import { HeaderButton } from "./Components";
+import {options} from "../utils/tableUtils";
 
 export default function ManageNumbers() {
   const [open, setOpen] = useState(false);
@@ -43,8 +43,8 @@ export default function ManageNumbers() {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
         customBodyRender: (value) => (
           <div style={{textAlign: 'center', minWidth: 70}}>
-            <Badge pill variant={value === "success" ? "success": "warning"} style={{fontWeight: 'bold', color: 'white'}}>
-              {value.toUpperCase()}
+            <Badge pill variant={value === "Success" ? "success": "warning"} style={{fontWeight: 'bold', color: 'white'}}>
+              {value}
             </Badge></div>
         )
       }
@@ -66,7 +66,7 @@ export default function ManageNumbers() {
       name: "remaining", label: "Remaining", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
         customBodyRender: (value) => (
-          <Grid container justify="center" style={{minWidth: 140}}>
+          <Grid container justify="center" style={{minWidth: 120}}>
             <Badge pill variant="primary">{value}min</Badge>
             <Typography>&nbsp;/&nbsp;</Typography>
             <Badge pill variant="warning">${value}.00</Badge>
@@ -115,18 +115,13 @@ export default function ManageNumbers() {
     }
   ];
 
-  const options = {
-    filterType: "dropdown",
-    responsive: "scrollMaxHeight"
-  };
-
   const data = [
     {
       id: 1,
       service_type: "US or International Type",
       number: "8884233345",
       destination_number: "18884233345",
-      status: "success",
+      status: "Success",
       description: "test number",
       billing_ended: "2020/04/20",
       spent: 3,
@@ -141,7 +136,7 @@ export default function ManageNumbers() {
       service_type: "US or International Type",
       number: "8884233453",
       destination_number: "18884233453",
-      status: "warning",
+      status: "Warning",
       description: "second number",
       billing_ended: "2020/04/26",
       spent: 7,

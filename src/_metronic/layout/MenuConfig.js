@@ -41,7 +41,7 @@ export default {
           {
             title: "Invoices",
             bullet: "dot",
-            page: "configuration"
+            page: "invoices"
           },
           {
             title: "Payments",
@@ -110,7 +110,7 @@ export default {
         submenu: [
           {
             title: "Invoices",
-            page: 'Account'
+            page: 'invoices'
           },
           {
             title: 'Payments',

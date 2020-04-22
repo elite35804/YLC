@@ -46,7 +46,7 @@ export default function Configuration() {
             <Typography className={classes.heading}>Timezone Setting</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid xs={12} sm={12}>
+            <Grid item xs={12} sm={12}>
               <AccountSelect value={values.timezone} onChange={handleChange} name="timezone" options={timezones} label="Timezone" size={12}/>
               <AccountSelect value={values.dateFormat} onChange={handleChange} name="dateFormat" options={dateFormates} label="Duration Format" size={12}/>
               <AccountSelect value={values.timeFormat} onChange={handleChange} name="timeFormat" options={timeFormates} label="Dashboard Time Format" size={12}/>

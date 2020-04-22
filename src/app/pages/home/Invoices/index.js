@@ -25,13 +25,9 @@ export default function Invoices() {
     {
       name: "amount", label: "Invoice Amount", options: {
         customHeadRender: (props) => <CellCenterHeader value={props.label}/>,
-        customBodyRender: (value) => (
-          <div className="text-center" style={{minWidth: 70}}>
-            <Badge pill variant="success"
-                   style={{fontWeight: 'bold', color: 'white'}}>
-              {value}
-            </Badge></div>
-        )
+        customBodyRender: (value) => <div className="text-center" style={{minWidth: 70}}>
+          <Badge pill variant="success" style={{fontWeight: 'bold', color: 'white'}}>{value}</Badge>
+        </div>
       }
     },
     {name: "transaction_id", label: "Transaction Id"},
@@ -98,7 +94,7 @@ export default function Invoices() {
   ];
 
   return (
-    <Paper style={{padding: 20}}>
+    <Paper style={{padding: 10}}>
       <Tabs
         value={key}
         onChange={(key, newValue) => setKey(newValue)}

@@ -77,5 +77,5 @@ export const Header = (props) => (
 
 // Set mui datatable cell header to center
 export const CellCenterHeader = ({value}) => (
-  <TableCell style={{textAlign: 'center'}}>{value}</TableCell>
+  <TableCell style={{textAlign: 'center'}} key={value + Math.random() + 100000}>{value}</TableCell>
 );

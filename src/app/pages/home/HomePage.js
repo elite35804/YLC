@@ -7,6 +7,8 @@ import Configuration from './Configuration/index';
 import ManageNumbers from './ManageNumbers/index';
 import ActivityLog from "./ActivityLog";
 import Invoices from "./Invoices";
+import Payments from "./Payments";
+import CallLog from "./CallLog";
 import { LayoutSplashScreen } from "../../../_metronic";
 
 export default function HomePage() {
@@ -24,6 +26,8 @@ export default function HomePage() {
         <Route path="/manage_numbers" component={ManageNumbers}/>
         <Route path="/activity_log" component={ActivityLog}/>
         <Route path="/invoices" component={Invoices}/>
+        <Route path="/payments" component={Payments}/>
+        <Route path="/call_log" component={CallLog}/>
       </Switch>
     </Suspense>
   );

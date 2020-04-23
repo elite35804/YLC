@@ -46,7 +46,7 @@ export default {
           {
             title: "Payments",
             bullet: "dot",
-            page: "configuration"
+            page: "payments"
           }
         ]
       },
@@ -54,7 +54,7 @@ export default {
         title: "Call Log",
         root: true,
         alignment: "left",
-        page: "configuration",
+        page: "call_log",
       },
       {
         title: "Quick Pay",
@@ -114,7 +114,7 @@ export default {
           },
           {
             title: 'Payments',
-            page: "Account"
+            page: "payments"
           }
         ]
       },
@@ -122,7 +122,7 @@ export default {
         title: "Call Log",
         root: true,
         icon: "flaticon2-lorry",
-        page: "Account",
+        page: "call_log",
         bullet: "dot"
       },
       {

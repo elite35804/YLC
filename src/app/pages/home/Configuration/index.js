@@ -24,9 +24,7 @@ const useStyles = makeStyles(theme => ({
 export default function Configuration() {
 
   const classes = useStyles();
-
   const [values, setValues] = React.useState({});
-
   const handleChange = (event) => {
     setValues(oldValues => ({
       ...oldValues,

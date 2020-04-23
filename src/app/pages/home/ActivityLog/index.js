@@ -64,7 +64,7 @@ export default function ActivityLog() {
   return (
     <>
       <MUIDataTable
-        title={<Typography variant="h5" component="h5">Telephone Number Management</Typography>}
+        title={<Typography variant="h5" component="h5">Activity Log</Typography>}
         columns={columns}
         options={options}
         data={data}

@@ -9,6 +9,7 @@ import ActivityLog from "./ActivityLog";
 import Invoices from "./Invoices";
 import Payments from "./Payments";
 import CallLog from "./CallLog";
+import QuickPay from "./QuickPay";
 import { LayoutSplashScreen } from "../../../_metronic";
 
 export default function HomePage() {
@@ -28,6 +29,7 @@ export default function HomePage() {
         <Route path="/invoices" component={Invoices}/>
         <Route path="/payments" component={Payments}/>
         <Route path="/call_log" component={CallLog}/>
+        <Route path="/quick_pay" component={QuickPay}/>
       </Switch>
     </Suspense>
   );

@@ -90,8 +90,8 @@ export const NumberFee = ({onChange, values, isAdd}) => (
   </Grid>
 );
 
-export const BillingSystem = ({tab, onChange, values, state, onCheck, onTab}) => (
-  <Card className="mt-1">
+export const BillingSystem = ({tab, onChange, values, state, onCheck, onTab, noMargin}) => (
+  <Card className={!noMargin && "mt-1"}>
     <Header>Provide Your Billing Details</Header>
     <Card.Body>
       <Tabs value={tab} indicatorColor="primary" textColor="primary" onChange={onTab}>

@@ -60,7 +60,7 @@ export default {
         title: "Quick Pay",
         root: true,
         alignment: "left",
-        page: "configuration",
+        page: "quick_pay",
       },
     ]
   },
@@ -98,7 +98,7 @@ export default {
       {
         title: "Activity Log",
         root: true,
-        icon: "flaticon-folder-4",
+        icon: "flaticon2-envelope",
         page: "activity_log",
         bullet: "dot"
       },
@@ -129,7 +129,7 @@ export default {
         title: "Quick Pay",
         root: true,
         icon: "flaticon2-cd",
-        page: "Account",
+        page: "quick_pay",
         bullet: "dot"
       },
     ]

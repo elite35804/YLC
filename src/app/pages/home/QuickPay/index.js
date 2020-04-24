@@ -1,22 +1,18 @@
 import React from "react";
 import {
   Grid,
-  Tabs,
-  Tab, Button, Typography,
+  Button,
+  Typography,
 } from "@material-ui/core";
 import {Card} from "react-bootstrap";
-import {AccountInput, AccountSelect} from "../components/Base";
-import {Header, localNumbers, serviceTypes} from "../utils";
+import {AccountInput} from "../components/Base";
+import {Header} from "../utils";
 import {BillingSystem} from "../ManageNumbers/LocalNumModal";
 
 
 const QuickPay = ({open, onClose}) => {
-  const [tab, setTab] = React.useState(0);
   const [tab1, setTab1] = React.useState(0);
-  const [radio, setRadio] = React.useState("");
-  const handleTab = (event, newValue) => setTab(newValue);
   const handleTab1 = (event, newValue) => setTab1(newValue);
-  const handleRadio = e => setRadio(e.target.value);
   const [values, setValues] = React.useState({});
   const [state, setState] = React.useState({
     email: false,
